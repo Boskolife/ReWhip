@@ -964,6 +964,11 @@ html {
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.08);
         padding: 16px 24px;
+        list-style: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
 
         &[open] {
 
