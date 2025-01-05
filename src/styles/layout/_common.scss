@@ -966,7 +966,7 @@ html {
         padding: 16px 24px;
         list-style: none;
 
-        &::-webkit-details-marker {
+        ::-webkit-details-marker {
             display: none;
         }
 
