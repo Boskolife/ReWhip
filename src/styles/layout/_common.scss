@@ -528,7 +528,7 @@ body {
         }
     }
 
-    .swiper-wrapper{
+    .swiper-wrapper {
         align-items: center;
     }
 
@@ -752,7 +752,6 @@ body {
     }
 
     .swiper-button-prev {
-        top: 40%;
 
         &::after {
             content: url(../images/arrow_prev.svg);
@@ -760,7 +759,6 @@ body {
     }
 
     .swiper-button-next {
-        top: 40%;
 
         &::after {
             content: url(../images/arrow_next.svg);
