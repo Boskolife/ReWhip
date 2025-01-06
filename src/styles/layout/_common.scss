@@ -528,6 +528,10 @@ body {
         }
     }
 
+    .swiper-wrapper {
+        align-items: center;
+    }
+
     .slide {
         min-height: 600px;
 
@@ -748,7 +752,6 @@ body {
     }
 
     .swiper-button-prev {
-        top: 40%;
 
         &::after {
             content: url(../images/arrow_prev.svg);
@@ -756,7 +759,6 @@ body {
     }
 
     .swiper-button-next {
-        top: 40%;
 
         &::after {
             content: url(../images/arrow_next.svg);
