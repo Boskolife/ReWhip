@@ -1,11 +1,10 @@
-body {
-    border-top: 12px solid $green;
-    @include adaptive-value("border-width", 12, 8, 1);
-    background-color: $black;
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $gray3A $green;
 }
 
 html {
-
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -19,7 +18,16 @@ html {
         background-color: $gray3A;
         border-radius: 10px;
     }
+
 }
+
+body {
+    border-top: 12px solid $green;
+    @include adaptive-value("border-width", 12, 8, 1);
+    background-color: $black;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 
 .container {
     max-width: 1390px;
@@ -152,6 +160,13 @@ html {
         line-height: 120%;
         letter-spacing: -0.64px;
         text-transform: uppercase;
+        margin-top: 30px;
+    }
+}
+
+@media (orientation: landscape) {
+    .main_section {
+        height: 100%;
     }
 }
 
@@ -412,14 +427,13 @@ html {
         gap: 15px;
 
         @include media ("<tablet") {
-            justify-content: flex-start;
             position: relative;
             z-index: 1;
         }
     }
 
     .store_link {
-        width: 150px;
+        width: 149px;
 
         img {
             width: 100%;
@@ -813,6 +827,7 @@ html {
     }
 
     .search_link {
+        border: 1px solid transparent;
         color: $gray3A;
         font-size: 18px;
         font-weight: 600;
@@ -828,6 +843,24 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all .3s ease 0s;
+    }
+
+    @media(hover:hover) {
+        .search_link:hover {
+            border: 1px solid $green;
+            color: $green;
+            background-color: $black;
+            transition: all .3s ease 0s;
+        }
+    }
+
+    @media(hover:none) {
+        .search_link:active {
+            border: 1px solid $green;
+            color: $green;
+            background-color: $black;
+        }
     }
 }
 
@@ -908,6 +941,7 @@ html {
         }
 
         .form_btn {
+            border: 1px solid transparent;
             background-color: $green;
             border-radius: 12px;
             height: 48px;
@@ -917,6 +951,25 @@ html {
             font-weight: 600;
             line-height: 120%;
             letter-spacing: 0.36px;
+            transition: all .3s ease 0s;
+        }
+
+        @media(hover:hover) {
+            .form_btn:hover {
+                border: 1px solid $green;
+                color: $green;
+                background-color: $black;
+                transition: all .3s ease 0s;
+            }
+        }
+
+        @media(hover:none) {
+            .form_btn:active {
+                border: 1px solid $green;
+                color: $green;
+                background-color: $black;
+                transition: all .3s ease 0s;
+            }
         }
     }
 
@@ -930,6 +983,7 @@ html {
 
         a {
             color: $green;
+            text-decoration: underline
         }
     }
 }
@@ -968,7 +1022,8 @@ html {
         text-align: start;
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.08);
-        padding: 16px 24px;
+
+        cursor: pointer;
 
 
         &[open] {
@@ -992,6 +1047,7 @@ html {
         align-items: center;
         justify-content: space-between;
         list-style: none;
+        padding: 16px 24px;
 
         &::-webkit-details-marker {
             display: none;
@@ -1027,6 +1083,7 @@ html {
         margin-top: 12px;
         max-width: 776px;
         width: 100%;
+        padding: 0 24px 16px 24px;
     }
 
 }
