@@ -348,9 +348,9 @@ body {
         background-color: $white;
         border-radius: 20px;
         @include adaptive-value("padding-top", 80, 40, 1);
-        @include adaptive-value("padding-bottom", 60, 7, 1);
+        @include adaptive-value("padding-bottom", 60, 16, 1);
         @include adaptive-value("padding-right", 54, 24, 1);
-        @include adaptive-value("padding-left", 54, 16, 1);
+        @include adaptive-value("padding-left", 54, 24, 1);
         position: relative;
     }
 
