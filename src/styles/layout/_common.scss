@@ -39,7 +39,7 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100dvh;
+    height: 100vh;
     position: relative;
 
     &::before {
@@ -200,6 +200,9 @@ html {
         align-items: center;
         justify-content: space-between;
         gap: 30px;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
         @include adaptive-value("margin-bottom", 215, 120, 1);
 
         @include media ("<tablet") {
@@ -731,6 +734,7 @@ html {
     }
 
     .swiper-button-prev {
+        top: 40%;
 
         &::after {
             content: url(../images/arrow_prev.svg);
@@ -738,6 +742,7 @@ html {
     }
 
     .swiper-button-next {
+        top: 40%;
 
         &::after {
             content: url(../images/arrow_next.svg);
@@ -964,7 +969,7 @@ html {
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.08);
         padding: 16px 24px;
-     
+
 
         &[open] {
 
