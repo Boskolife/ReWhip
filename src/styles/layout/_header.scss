@@ -88,6 +88,7 @@
     }
 
     .header_link {
+        border: 1px solid transparent;
         color: $gray3A;
         font-size: 18px;
         font-weight: 600;
@@ -101,9 +102,28 @@
         align-items: center;
         justify-content: center;
         margin-left: auto;
+        transition: all .3s ease 0s;
 
         @include media ("<tablet") {
             margin: 0 auto;
+        }
+    }
+
+    @media(hover:hover) {
+        .header_link:hover {
+            border: 1px solid $green;
+            color: $green;
+            background-color: $black;
+            transition: all .3s ease 0s;
+        }
+    }
+
+    @media(hover:none) {
+        .header_link:active {
+            border: 1px solid $green;
+            color: $green;
+            background-color: $black;
+            transition: all .3s ease 0s;
         }
     }
 
